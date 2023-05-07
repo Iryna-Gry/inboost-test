@@ -5,11 +5,12 @@ import { BiPlusMedical, BiTrash, BiEdit } from "react-icons/bi";
 import css from "./SharedLayout.module.css";
 
 export const SharedLayout = () => {
-  const [query, setQuery] = useState("");
+  // const [query, setQuery] = useState("");
+  // eslint-disable-next-line
   const [isSelected, setIsSelected] = useState(false);
-  const addNote = () => {};
-  const deleteNote = () => {};
-  const editNote = () => {};
+  // const addNote = () => {};
+  // const deleteNote = () => {};
+  // const editNote = () => {};
 
   return (
     <>

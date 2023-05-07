@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { fetchAPI } from "services/fetchAPI";
-import { Loader, NotesList } from "components";
+import { Sidebar, MainView } from "components";
+import css from "./Home.module.css";
 
 export const Home = () => {
   const [notes, setNotes] = useState([]);
@@ -11,7 +12,7 @@ export const Home = () => {
     setIsLoading(true);
     fetchAPI()
       .then((response) => {
-        setNotes([...response.results]);
+        setNotes([...response]);
         setIsLoading(false);
       })
       .catch((error) => {
@@ -19,11 +20,12 @@ export const Home = () => {
       });
   }, []);
 
+  const getCurrentNote = (id) => notes.find((item) => item.id === id);
+
   return (
-    <div>
-      {isLoading && <Loader></Loader>}
-      {notes.length > 0 && <NotesList data={notes}></NotesList>}
-      {error && <p>Something went wrong. Please, refresh the page</p>}
+    <div className={css.HomeView}>
+      <Sidebar data={notes} />
+      <MainView data={getCurrentNote()} isLoading={isLoading} error={error} />
     </div>
   );
 };

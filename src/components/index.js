@@ -7,3 +7,6 @@ export * from "./Searchbar/Searchbar";
 export * from "./Button/Button";
 export * from "./Sidebar/Sidebar";
 export * from "./NotesList/NotesList";
+export * from "./NoteListItem/NoteListItem";
+export * from "./MainView/MainView";
+export * from "./Note/Note";

@@ -1,15 +1,17 @@
 import axios from "axios";
 
-const API_KEY = "e57746b2e4fe98cb5cc839cb405a15f1";
-const BASE_URL = "https://api.themoviedb.org/3";
+const API_KEY = "cUWRhdIILdW7XMnmojt8km";
+const BASE_URL = "https://quintadb.com/apps/";
 
 export async function fetchAPI() {
   try {
     const response = await axios.get(
-      `${BASE_URL}/trending/movie/day?api_key=${API_KEY}&page=${page}`
+      `${
+        BASE_URL + API_KEY
+      }/dtypes/entity/ckeNJdOIDol4kAW4ddK8kT.json?rest_api_key=bOW5pdJXTlW7nYWQZdUCke&amp;view=`
     );
-
-    return response.data;
+    console.log(response.data.records);
+    return response.data.records;
   } catch (error) {
     console.error("getTrendingFilms error" + error);
   }
