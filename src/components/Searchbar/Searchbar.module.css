@@ -1,0 +1,39 @@
+.Searchbar {
+  min-height: 30px;
+  padding-right: 24px;
+  padding-left: 24px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: #fff;
+  background-color: transparent;
+}
+
+/*
+ * Стили компонента SearchForm
+ */
+.SearchForm {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-width: 350px;
+  background-color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.SearchFormInput {
+  display: inline-block;
+  width: 100%;
+  font: inherit;
+  font-size: 20px;
+  border: none;
+  outline: none;
+  padding-left: 4px;
+  padding-right: 4px;
+  text-align: center;
+}
+
+.SearchFormInput::placeholder {
+  font: inherit;
+  font-size: 18px;
+}

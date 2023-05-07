@@ -1,0 +1,26 @@
+.Button {
+  background-color: rgb(243, 243, 243);
+  border: none;
+  border-radius: 4px;
+  padding: 2px 8px;
+  cursor: pointer;
+  transition: background-color 0.3ms ease-in-out, color 0.3ms ease-in-out;
+  color: rgb(61, 61, 61);
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+.Button:hover,
+.Button:focus {
+  background-color: #717377;
+  color: whitesmoke;
+}
+.Button:disabled {
+  background-color: rgb(243, 243, 243);
+  color: rgb(156, 156, 156);
+  cursor: auto;
+}
+
+.Button svg {
+  width: 20px;
+  height: 20px;
+}
